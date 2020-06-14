@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculando valor</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#titulo {
+			font-size: 30pt;
+			color: #6a5acd;;
+			text-align: center;
+		}
+
+		#inp {
+			position: absolute;
+			right: 650px;
+		}
+		#botao {
+			position: absolute;
+			right: 685px;
+			top: 160px;
+		}
+		#ancora {
+			position: absolute;
+			top: 200px;
+			left: 640px;
+			text-decoration: none;
+			color: red;
+		}
+		#demo {
+			text-align: center;
+			
+		}
+		#foto {
+			position: absolute;
+			left: 500px;
+		}
+	</style>
+</head>
+<body>
+ 
+<p id="titulo">Calculando valor que voce deseja, mostrando sua tabuada</p>
+	<img  id="foto" src="fotos.jpg">
+	<input type="number" name="" id="inp" placeholder="Digite o valor aqui"/>
+
+<button  onclick="calcula()" id="botao">calcular valor</button>
+
+<a id="ancora" href="javascript: history.go()-1">outro valor</a>
+
+<p id="demo"></p>
+
+	<script type="text/javascript">
+		var text = "";
+		function calcula() {
+			var valor = document.getElementById('inp').value;
+			document.getElementById('demo').innerHTML = valor;
+			
+				for(i = 1; i <= 10; i++) {
+					text += valor + " x " + i + " = " + valor * i + "</br>";
+				}
+				document.getElementById('demo').innerHTML = text;
+		
+		}
+	
+	</script>
+</body>
+</html>
