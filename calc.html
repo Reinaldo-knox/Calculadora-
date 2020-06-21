@@ -4,38 +4,20 @@
 	<title>calculando valor</title>
 	<meta charset="utf-8">
 	<style type="text/css">
-                body {
+        body {
                     background: black;
-                }
+					color: white;
+        }
 		#titulo {
 			font-size: 30pt;
 			color: #6a5acd;;
 			text-align: center;
 		}
-
-		#inp {
-			position: absolute;
-			right: 650px;
-		}
-		#botao {
-			position: absolute;
-			right: 685px;
-			top: 160px;
-		}
 		#ancora {
-			position: absolute;
 			top: 200px;
 			left: 640px;
 			text-decoration: none;
 			color: red;
-		}
-		#demo {
-			text-align: center;
-			
-		}
-		#foto {
-			position: absolute;
-			left: 500px;
 		}
 	</style>
 </head>
@@ -54,13 +36,10 @@
 		var text = "";
 		function calcula() {
 			var valor = document.getElementById('inp').value;
-			document.getElementById('demo').innerHTML = valor;
-			
 				for(i = 1; i <= 10; i++) {
 					text += valor + " x " + i + " = " + valor * i + "</br>";
 				}
 				document.getElementById('demo').innerHTML = text;
-		
 		}
 	
 	</script>
